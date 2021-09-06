@@ -5,6 +5,7 @@ import {
   CCol,
   CRow,
 } from '@coreui/react'
+import BribeContainer from "../bribes/BribeContainer";
 
 
 const Dashboard = () => {
@@ -14,7 +15,7 @@ const Dashboard = () => {
         <CCol>
           <CCard>
             <CCardHeader>
-              <h1>Welcome to Basic Demo Web!!!</h1>
+              <BribeContainer/>
             </CCardHeader>
           </CCard>
         </CCol>

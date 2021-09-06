@@ -1,3 +1,3 @@
 module.exports = {
-  apiUrl: 'https://api-bribes.vercel.app/',
+  apiUrl: 'https://api-bribes.vercel.app',
 };
