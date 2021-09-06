@@ -1,3 +1,3 @@
 module.exports = {
-  apiUrl: 'https://rest-api-theta.vercel.app',
+  apiUrl: 'https://api-bribes.vercel.app/',
 };
