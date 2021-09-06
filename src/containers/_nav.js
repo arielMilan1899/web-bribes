@@ -1,11 +1,3 @@
-import {GATEWAYS} from "../routes";
-
-export default [
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'GATEWAYS',
-    to: GATEWAYS,
-    icon: 'cil-apps'
-  },
-]
+//Add routes to show in sidebar
+export default []
 
