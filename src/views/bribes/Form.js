@@ -27,7 +27,8 @@ const Form = (props) => {
    * Updating before send to parent.
    * @returns {*} No returns.
    */
-  const handleRunBribe = () => {
+  const handleRunBribe = (e) => {
+    e.preventDefault();
     runBribe(queue);
   };
 
@@ -38,7 +39,7 @@ const Form = (props) => {
           <CCard>
             <CCardHeader>Run Bribe algorithm</CCardHeader>
             <CCardBody>
-              <CForm action="" method="post" encType="multipart/form-data" className="form-horizontal">
+              <CForm onSubmit={handleRunBribe} className="form-horizontal">
                 <CFormGroup row>
                   <CCol xs="12" md="9">
                     <CInput
@@ -53,14 +54,14 @@ const Form = (props) => {
                     <small>{errors.find(error => error.param === 'queue').msg}</small>}
                   </CCol>
                 </CFormGroup>
+                <CCol xs="12" md="9">
+                  <CLabel htmlFor="text-input">{isNaN(result) ? result : `Bribes: ${result}`}</CLabel>
+                </CCol>
+                <CCardFooter>
+                  <CButton type="submit" color="success" className="px-4">Run</CButton>
+                </CCardFooter>
               </CForm>
-              <CCol xs="12" md="9">
-                <CLabel htmlFor="text-input">{isNaN(result) ? result : `Bribes: ${result}`}</CLabel>
-              </CCol>
             </CCardBody>
-            <CCardFooter>
-              <CButton color="success" className="px-4" onClick={handleRunBribe}>Run</CButton>
-            </CCardFooter>
           </CCard>
         </CCol>
       </CRow>

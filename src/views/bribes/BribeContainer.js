@@ -20,7 +20,7 @@ const BribeContainer = () => {
       .then(({data, errors: postErrors}) => {
         if (postErrors) {
           setErrors(postErrors);
-          setResult([]);
+          setResult();
         } else {
           setResult(data);
           setErrors([]);
